@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  rabbitmq:
+    build: .
+    hostname: "rabbitmq"
+    ports:
+      - "15672:15672"
+      - "15674:15674"
+      - "15675:15675"
+      - "15692:15692"
+      - "5672:5672"
+      - "1883:1883"
+      - "8883:8883"
+
+
+networks:
+  default:
+    name: skaben_network
+    external: true
