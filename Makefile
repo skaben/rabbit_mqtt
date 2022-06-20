@@ -22,14 +22,14 @@ start: network-create  ##  Запуск
 stop:  ##  Останов
 	@docker-compose down
 
-restart: ##  Перезапустить сервис [restart.[service]]
+restart: ##  Перезапустить
 	@docker-compose up --force-recreate -d
 
 info:  ##  Показать список сервисов
 	@docker-compose ps -a
 
 shell: ##  Интерактивная оболочка
-	@docker-compose exec -it rabbitmq bash
+	@docker-compose exec rabbitmq bash
 
 help:
 	@echo "\nКоманды:\n"

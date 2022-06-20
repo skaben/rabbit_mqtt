@@ -4,6 +4,8 @@ services:
   rabbitmq:
     build: .
     hostname: "rabbitmq"
+    volumes:
+      - ./definitions.json:/etc/rabbitmq/definitions.json
     ports:
       - "15672:15672"
       - "15674:15674"
